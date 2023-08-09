@@ -1,7 +1,7 @@
 import React from 'react'
 import Tarjeta from '../components/Utils/Tarjeta'
 import Header from '../components/header/Header'
-import { datos, datos2, datos3, datos4, opinionesUsuarios } from '../assets/js/data'
+import { datos, datos2, datos3, datos4, opinionesUsuarios, datosEncabezado } from '../assets/js/data'
 import TarjetaLineal from '../components/Utils/TarjetaLineal'
 import Opiniones from '../components/Utils/Opiniones'
 import Footers from '../components/Footer/Footers'
@@ -10,7 +10,7 @@ import Footers from '../components/Footer/Footers'
 const Home = () => {
     return (
         <>
-            <Header />
+            <Header contenido={datosEncabezado} />
             {
                 datos.map((contenido, index) => <Tarjeta contenido={contenido} orientacion={contenido.orientacion} key={index} />)
             }

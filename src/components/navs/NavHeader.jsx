@@ -14,8 +14,8 @@ const NavHeader = () => {
                         </IconContext.Provider>
                     </div>
                     <div className="space-x-4">
-                        <Link to={'login'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Residential</Link>
-                        <Link to={'support'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Enterprise</Link>
+                        <Link to={'/'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Residential</Link>
+                        <Link to={'enterprise'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Enterprise</Link>
                         <Link to={'login'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Cars</Link>
                         <Link to={'support'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">TV</Link>
                     </div>

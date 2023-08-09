@@ -10,13 +10,13 @@ const Tarjeta = ({ contenido, orientacion }) => {
                     ? (
                         <>
                             <TarjetaImagen url={contenido.url} />
-                            <TarjetaContenido contenido={contenido} />
+                            <TarjetaContenido contenido={contenido} botones={contenido.botones} />
                         </>
                     )
                     :
                     (
                         <>
-                            <TarjetaContenido contenido={contenido} />
+                            <TarjetaContenido contenido={contenido} botones={contenido.botones} />
                             <TarjetaImagen url={contenido.url} />
                         </>
                         

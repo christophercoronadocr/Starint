@@ -12,13 +12,13 @@ const TarjetaLineal = ({ contenido, url }) => {
                         (
                             <>
                                 <div></div>
-                                <TarjetaContenido contenido={contenido} fondo='' />
+                                <TarjetaContenido contenido={contenido} fondo='' botones={contenido.botones} />
                             </>
                         )
                         :
                         (
                             <>
-                                <TarjetaContenido contenido={contenido} fondo='' />
+                                <TarjetaContenido contenido={contenido} fondo='' botones={contenido.botones} />
                                 <div></div>
                             </>
                         )

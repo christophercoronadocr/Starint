@@ -7,6 +7,7 @@ import {
 import Home from '../pages/Home';
 import Login from '../pages/Login'
 import NotFoundPage from '../pages/NotFoundPage';
+import Enterprise from '../pages/Enterprise';
 
 
 const Routing = () => {
@@ -15,6 +16,9 @@ const Routing = () => {
             <Switch>
                 <Route path={"/login"}>
                     <Login />
+                </Route>
+                <Route path={"/enterprise"}>
+                    <Enterprise />
                 </Route>
                 <Route exact path={"/"}>
                     <Home />

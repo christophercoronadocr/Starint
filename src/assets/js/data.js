@@ -2,20 +2,35 @@ export const datos = [
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo1.webp',
-        orientacion: 'imagen-contenido'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingStreaming_Redesign.webp',
+        orientacion: 'imagen-contenido',
+        botones: [
+            {
+                titulo: "LEARN MORE"
+            }
+        ]
     },
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo2.jpg',
-        orientacion: 'contenido-imagen'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingPlugin.jpg',
+        orientacion: 'contenido-imagen',
+        botones: [
+            {
+                titulo: "VIEW INSTALL"
+            }
+        ]
     },
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo3.jpg',
-        orientacion: 'imagen-contenido'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingHighspeed.jpg',
+        orientacion: 'imagen-contenido',
+        botones: [
+            {
+                titulo: "ORDER NOW"
+            }
+        ]
     }
 ]
 
@@ -23,30 +38,53 @@ export const datos2 = [
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo6.webp',
-        orientacion: 'imagen-contenido'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingKeepingClean.webp',
+        orientacion: 'imagen-contenido',
+        botones: [
+            {
+                titulo: "LEARN MORE"
+            }
+        ]
     },
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo7.webp',
-        orientacion: 'contenido-imagen'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingEngineered.webp',
+        orientacion: 'contenido-imagen',
+        botones: [
+            {
+                titulo: "LEARN MORE"
+            }
+        ]
     }
 ]
 export const datos3 = [
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo4.webp',
-        orientacion: 'contenido-imagen'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingTravel_Redesign.webp',
+        orientacion: 'contenido-imagen',
+        botones: [
+            {
+                titulo: "LEARN MORE"
+            }
+        ]
     }
 ]
 export const datos4 = [
     {
         titulo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ratione nobis repellat adipisci eum.',
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quod natus officiis laudantium. Quod quos dolor perferendis impedit harum iste, officia delectus saepe temporibus vel, commodi neque numquam repellendus.',
-        url: './fondo5.webp',
-        orientacion: 'imagen-contenido'
+        url: 'https://api.starlink.com/public-files/Marketing_LandingApp_Redesign.webp',
+        orientacion: 'imagen-contenido',
+        botones: [
+            {
+                titulo: "DOWNLOAD FOR IOS"
+            },
+            {
+                titulo: "DOWNLOAD FOR ANDROID"
+            }
+        ]
     }
 ]
 
@@ -64,3 +102,9 @@ export const opinionesUsuarios = [
         autor: '- Humberto A. de Oaxaca, México'
     }
 ]
+
+export const datosEncabezado = {
+    titulo: 'ORDER STARINT',
+    descripcion: 'Starlink provides high-speed, low-latency broadband internet across the globe. Within each coverage area, orders are fulfilled on a first-come, first-served basis.',
+    url: 'https://api.starlink.com/public-files/Marketing_LandingFeatured_Redesign.webp'
+}

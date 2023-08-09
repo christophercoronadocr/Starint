@@ -5,9 +5,9 @@ import FormularioHeader from '../Forms/FormularioHeader';
 
 
 
-const Header = () => {
+const Header = ({contenido}) => {
     return (
-        <div className="bg-cover bg-center h-screen bg-[url('https://api.starlink.com/public-files/Marketing_LandingFeatured_Redesign.webp')]">
+        <div className="bg-cover bg-center h-screen" style={{backgroundImage: `url(${contenido.url})`}}>
             <NavHeader />
             {/* <Header2></Header2> */}
             <div className='flex-row text-center px-20 pt-1 h-2/3'>
@@ -16,10 +16,11 @@ const Header = () => {
                         <FaGrav />
                     </IconContext.Provider>
                 </div>
-                <h1 className='text-5xl font-serif font-bold mb-2 text-white'>ORDER STARINT</h1>
+                <h1 className='text-5xl font-serif font-bold mb-2 text-white'>{contenido.titulo}</h1>
                 <h2 className='text-xl font-serif text-white'
-                >Starlink provides high-speed, low-latency broadband internet across the globe.
-                    Within each coverage area, orders are fulfilled on a first-come, first-served basis.</h2>
+                >{
+                    contenido.descripcion
+                }</h2>
             </div>
             <div className='grid h-1/6'>
                 <div className='flex items-end justify-center'>
