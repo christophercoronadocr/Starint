@@ -5,7 +5,7 @@ const FormularioFooter = () => {
         <div className='h-3/4 w-full text-center pt-20'>
             <div className='my-5'>
                 <p>
-                    ¿Interesado en estar al día con Starint?
+                    Interested in staying up to date with StarInt?
                 </p>
             </div>
             <div className="grid grid-cols-2">
@@ -18,7 +18,7 @@ const FormularioFooter = () => {
                     <button type="button"
                         className='lg:w-1/6 sm:w-1/2 h-12 border-black font-bold rounded-md
             bg-neutral-700 uppercase hover:bg-neutral-500 transition text-gray-400'>
-                        Inscribirme
+                        REGISTER
                     </button>
                 </div>
             </div>

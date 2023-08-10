@@ -19,13 +19,13 @@ const Footers = ({ verForm = false }) => {
                             <span>Starint © 2023</span>
                         </div>
                         <div className='space-x-3'>
-                            <a href="">Operadores de satélites</a> |
-                            <a href="">Privacidad y Legal</a> |
-                            <a href="">Preferencias de privacidad</a>
+                            <a href="#">Satellite Operators</a> |
+                            <a href="#">Privacy & Legal</a> |
+                            <a href="#">Privacy Preferences</a>
                         </div>
                         <div>
                             <span>
-                                Startint es una división de Startint SA. Visítenos en <a href="#">starint.com</a>
+                                Startint is a division of SpaceInt. Visit us at <a href="#">starint.com</a>
                             </span>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ const TarjetaContenido = ({ contenido, fondo="bg-black", botones=[] }) => {
     return (
         <div className={`container mx-auto h-full ${fondo} text-white`}>
             <div className="h-screen">
-                <div className="flex items-end justify-center h-1/3 md:pl-24 md:pr-80">
+                <div className="flex items-end h-1/3 md:pl-24 md:pr-80">
                     <p className='font-bold text-4xl'>
                         {contenido.titulo}
                     </p>
