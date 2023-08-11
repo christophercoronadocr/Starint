@@ -21,7 +21,7 @@ const NavHeader = () => {
                     </div>
                     <div className="space-x-2">
                         <Link to={'login'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Login</Link>
-                        <Link to={'support'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Support</Link>
+                        <Link to={'register'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Sign up</Link>
                     </div>
                 </div>
             </div>

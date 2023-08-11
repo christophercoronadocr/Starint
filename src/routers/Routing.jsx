@@ -10,6 +10,7 @@ import NotFoundPage from '../pages/NotFoundPage';
 import Enterprise from '../pages/Enterprise';
 import Cars from '../pages/Cars';
 import TV from '../pages/TV';
+import Register from '../pages/Register';
 
 
 const Routing = () => {
@@ -27,6 +28,9 @@ const Routing = () => {
                 </Route>
                 <Route path={"/tv"}>
                     <TV />
+                </Route>
+                <Route path={"/register"}>
+                    <Register />
                 </Route>
                 <Route exact path={"/"}>
                     <Home />
