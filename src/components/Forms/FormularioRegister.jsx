@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { registerUser, getUsers } from '../../assets/js/Callbacks/APIRegisterUser'
-import axios from 'axios'
+import { registerUser } from '../../assets/js/Callbacks/APIRegisterUser'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import ErroresFormulario from '../ErroresFormulario/ErroresFormulario'
 
 
@@ -41,9 +41,9 @@ const FormularioRegister = ({ setUsuario }) => {
 
         if (respuesta.status == 200) {
             setError('');
-            location.href = "/";
+            location.href = "/Services";
         } else {
-            setError(respuesta.data);
+            setError(respuesta.message);
             console.log(respuesta);
         }
 
@@ -98,7 +98,12 @@ const FormularioRegister = ({ setUsuario }) => {
                         placeholder='Ingrese su contraseña' onChange={(e) => setContrasena(e.target.value)} value={contrasena} />
                 </div>
                 <div className='mb-5'>
-                    <button type='submit' className='bg-indigo-700 text-white font-bold uppercase w-4/5 p-4 rounded-md'>Register</button>
+                    <button type='submit' className='bg-green-700 hover:bg-green-500 text-white font-bold uppercase sm:w-4/5 md:mr-5 md:w-1/5 p-4 rounded-md inline'>Register</button>
+                    <Link to={'/'}>
+                        <button type='button' className='bg-red-700 hover:bg-red-500 text-white font-bold uppercase sm:w-4/5 md:w-1/5 p-4 rounded-md inline'>
+                            Regresar
+                        </button>
+                    </Link>
                 </div>
             </div>
         </form>

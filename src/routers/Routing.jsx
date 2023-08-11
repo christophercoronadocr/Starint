@@ -32,6 +32,9 @@ const Routing = () => {
                 <Route path={"/register"}>
                     <Register />
                 </Route>
+                <Route path={"/services"}>
+                    <Register />
+                </Route>
                 <Route exact path={"/"}>
                     <Home />
                 </Route>
