@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import ErroresFormulario from '../ErroresFormulario/ErroresFormulario'
 
 
-const FormularioRegister = ({ setUsuario }) => {
+const FormularioRegister = ({ validaAccesoUsuario }) => {
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
     const [DNI, setDNI] = useState("")
@@ -37,13 +37,16 @@ const FormularioRegister = ({ setUsuario }) => {
             return;
         }
 
-        const respuesta = await registerUser(usuario)
+        const respuesta = await registerUser(usuario);
+        console.log(respuesta);
 
-        if (respuesta.status == 200) {
+
+        if (respuesta.data.codigoRespuesta == 200) {
             setError('');
+            validaAccesoUsuario(respuesta.data.objetoRespuesta[0]);
             location.href = "/Services";
         } else {
-            setError(respuesta.message);
+            setError(respuesta.data.mensajeError);
             console.log(respuesta);
         }
 
@@ -66,35 +69,35 @@ const FormularioRegister = ({ setUsuario }) => {
                         : ""
                 }
                 <div className='mb-5'>
-                    <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
                 </div>
                 <div className='mb-5'>
-                    <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su apellido' onChange={(e) => setApellido(e.target.value)} value={apellido} />
                 </div>
                 <div className='mb-5'>
-                    <input type="number" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="number" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su DNI' onChange={(e) => setDNI(e.target.value)} value={DNI} />
                 </div>
                 <div className='mb-5'>
-                    <input type="number" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="number" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su telefono' onChange={(e) => setTelefono(e.target.value)} value={telefono} />
                 </div>
                 <div className='mb-5'>
-                    <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su país' onChange={(e) => setPais(e.target.value)} value={pais} />
                 </div>
                 <div className='mb-5'>
-                    <input type="date" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="date" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su fecha de nacimiento' onChange={(e) => setFechaNacimiento(e.target.value)} value={fechaNacimiento} />
                 </div>
                 <div className='mb-5'>
-                    <input type="email" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="email" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su email' onChange={(e) => setEmail(e.target.value)} value={email} />
                 </div>
                 <div className='mb-5'>
-                    <input type="password" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 text-white'
+                    <input type="password" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
                         placeholder='Ingrese su contraseña' onChange={(e) => setContrasena(e.target.value)} value={contrasena} />
                 </div>
                 <div className='mb-5'>

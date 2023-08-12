@@ -11,6 +11,7 @@ import Enterprise from '../pages/Enterprise';
 import Cars from '../pages/Cars';
 import TV from '../pages/TV';
 import Register from '../pages/Register';
+import Services from '../pages/Services';
 
 
 const Routing = () => {
@@ -33,7 +34,7 @@ const Routing = () => {
                     <Register />
                 </Route>
                 <Route path={"/services"}>
-                    <Register />
+                    <Services />
                 </Route>
                 <Route exact path={"/"}>
                     <Home />

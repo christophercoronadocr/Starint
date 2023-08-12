@@ -16,3 +16,11 @@ export const getUsers = async () => {
       });
   }
   
+  export const getUserById = async (id) => {
+   return await API.get('/Clientes/'+id).then((result) => {
+        return  result
+      }).catch((error) => {
+         return error
+      });
+  }
+  
