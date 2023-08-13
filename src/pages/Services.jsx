@@ -3,22 +3,26 @@ import NavHeader from '../components/navs/NavHeader'
 import Footers from '../components/Footer/Footers'
 import ServiceMenu from '../components/ServiceMenu/ServiceMenu'
 import Planes from '../components/carrousel/Planes'
+import {getUserById} from '../assets/js/Callbacks/APIGetUsers'
 
 const Services = () => {
 
   const [Usuario, setUsuario] = useState({})
 
   useEffect(() => {
-    return () => {
-      
-    }
-  }, [Usuario])
-  
+    fetchData();
+  }, []);
 
+  const fetchData = async () => {
+    var dataRespuesta = await getUserById(localStorage.getItem("IdUser"));
+    setUsuario(dataRespuesta.data[0])
+  };
+  
   return (
+    
     <>
       <div className='bg-black'>
-        <NavHeader />
+        <NavHeader Usuario={Usuario} setUsuario={setUsuario} />
       </div>
       <div className='flex items-center h-screen'>
         <div className='flex w-1/4 text-center h-full items-center'>

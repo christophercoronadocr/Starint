@@ -7,20 +7,3 @@ export const registerUser = async (usuario) => {
        return error
     });
 }
-
-export const getUsers = async () => {
-   return await API.get('/Clientes').then((result) => {
-        return  result
-      }).catch((error) => {
-         return error
-      });
-  }
-  
-  export const getUserById = async (id) => {
-   return await API.get('/Clientes/'+id).then((result) => {
-        return  result
-      }).catch((error) => {
-         return error
-      });
-  }
-  
