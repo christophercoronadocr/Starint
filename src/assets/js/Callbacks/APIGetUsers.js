@@ -37,3 +37,11 @@ export const getUserLogin = async (email, contrasena) => {
         return error
     });
 }
+
+export const getSubscriptionsByIdCliente = async (id) => {
+    return await API.get('/Servicios/GetSubscriptions/' + id).then((result) => {
+        return result
+    }).catch((error) => {
+        return error
+    });
+}

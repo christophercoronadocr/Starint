@@ -9,7 +9,15 @@ export const getServices = async () => {
 }
 
 export const getPlansByServiceId = async (id) => {
-    return await API.get('/Servicios/GetPlanesByServiceId/'+id).then((result) => {
+    return await API.get('/Servicios/GetDetailsPlanByIdServicio/'+id).then((result) => {
+        return result
+    }).catch((error) => {
+        return error
+    });
+}
+
+export const createASubscription = async (IdPlan, IdCliente) => {
+    return await API.post('/Servicios/'+IdPlan+"/"+IdCliente).then((result) => {
         return result
     }).catch((error) => {
         return error

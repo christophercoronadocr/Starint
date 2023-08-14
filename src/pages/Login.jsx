@@ -14,14 +14,13 @@ const Login = () => {
 
     const eventLogin = async (e) => {
         e.preventDefault();
-
+        localStorage.clear();
         var result = await getUserLogin(email, contrasena);
 
         const {mensajeError, codigoRespuesta, objetoRespuesta} = result.data;
         
         if (codigoRespuesta == 200) {
             setError('');
-            localStorage.clear();
             localStorage.setItem("IdUser", objetoRespuesta[0].id);
 
             location.href = '/services';
@@ -29,8 +28,6 @@ const Login = () => {
             setError(mensajeError);
         }
     }
-
-
 
     return (
         <div className='bg-black'>
@@ -49,14 +46,14 @@ const Login = () => {
                         </p>
                     </div>
                     <div className='flex 400 h-1/5 justify-center items-center'>
-                        <input type='text'
+                        <input type='email'
                             className='w-4/5 h-1/2 rounded-md p-2 border 
                             border-gray-300 bg-transparent px-4 py-2 
                             focus:outline-none focus:border-white text-white' placeholder='Correo electrónico'
                             onChange={(e) => setEmail(e.target.value)} value={email} />
                     </div>
                     <div className='flex 500 h-1/5 justify-center items-center'>
-                        <input type='text'
+                        <input type='password'
                             className='w-4/5 h-1/2 rounded-md p-2 border 
                             border-gray-300 bg-transparent px-4 py-2 
                             focus:outline-none focus:border-white text-white' placeholder='Contraseña'

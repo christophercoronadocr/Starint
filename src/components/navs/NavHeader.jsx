@@ -42,6 +42,7 @@ const NavHeader = ({ Usuario = {}, setUsuario }) => {
                             (
                                 <>
                                     <div className="space-x-1">
+                                        <Link to={'Subscriptions'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Subscriptions</Link>
                                         <Link to={'services'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Services</Link>
                                     </div>
                                     <div className="space-x-1">

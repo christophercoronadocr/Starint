@@ -12,6 +12,7 @@ import Cars from '../pages/Cars';
 import TV from '../pages/TV';
 import Register from '../pages/Register';
 import Services from '../pages/Services';
+import MainPage from '../pages/MainPage';
 
 
 const Routing = () => {
@@ -35,6 +36,9 @@ const Routing = () => {
                 </Route>
                 <Route path={"/services"}>
                     <Services />
+                </Route>
+                <Route path={"/Subscriptions"}>
+                    <MainPage />
                 </Route>
                 <Route exact path={"/"}>
                     <Home />

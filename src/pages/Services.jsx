@@ -17,7 +17,8 @@ const Services = () => {
   }, []);
 
   const fetchData = async () => {
-    var dataRespuesta = await getUserById(localStorage.getItem("IdUser"));
+    const id = localStorage.getItem("IdUser")
+    var dataRespuesta = await getUserById(id);
     var dataServices = await getServices();
     setUsuario(dataRespuesta.data[0])
     if (dataServices.data.codigoRespuesta == 200) {
@@ -27,9 +28,19 @@ const Services = () => {
 
   const getPlanOfServices = async (id) => {
     const result = await getPlansByServiceId(id);
-    console.log(result);
-  }
+    if (result.status != 200) {
+      console.log(result);
+      return
+    }
 
+    const planesDescripcion = JSON.parse(result.data);
+
+    if (planesDescripcion.CodigoRespuesta != 200) {
+      console.log(planesDescripcion.MensajeError);
+      return
+    }
+    setPlan(planesDescripcion.ObjetoRespuesta)
+  }
 
   return (
     <>
@@ -44,11 +55,11 @@ const Services = () => {
                 Servicios disponibles
               </h1>
             </div>
-            <ServiceMenu Services={Services} getPlanOfServices={getPlanOfServices}/>
+            <ServiceMenu Services={Services} getPlanOfServices={getPlanOfServices} />
           </div>
         </div>
         <div className='w-3/4 bg-red-200 mx-2 h-3/4 rounded-lg'>
-          <Planes />
+          <Planes Plan={Plan} Usuario={Usuario} />
         </div>
       </div>
       <Footers verForm={false} />

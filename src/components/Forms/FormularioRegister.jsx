@@ -38,8 +38,6 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
         }
 
         const respuesta = await registerUser(usuario);
-        console.log(respuesta);
-
 
         if (respuesta.data.codigoRespuesta == 200) {
             setError('');
@@ -47,7 +45,6 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
             location.href = "/Services";
         } else {
             setError(respuesta.data.mensajeError);
-            console.log(respuesta);
         }
 
     }
