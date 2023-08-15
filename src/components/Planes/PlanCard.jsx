@@ -4,7 +4,7 @@ import PlanesDetailsList from '../PlanesDetails/PlanesDetailsList';
 import { createASubscription } from '../../assets/js/Callbacks/APIGetServices';
 
 
-const PlanCard = ({Usuario, id, imagen, titulo, descripcion, Descripciones }) => {
+const PlanCard = ({Usuario, id, imagen, titulo, descripcion, Descripciones, Precio, setError }) => {
 
     const SuscribirseHandler = async (IdPlan) =>{
         if (Usuario.id != undefined && IdPlan != undefined) {
@@ -14,6 +14,7 @@ const PlanCard = ({Usuario, id, imagen, titulo, descripcion, Descripciones }) =>
                 if (jsonResult.CodigoRespuesta == 200) {
                     location.href = '/Subscriptions';
                 } else {
+                    setError(jsonResult.MensajeError)
                     console.log(jsonResult);
                 }
             } else {
@@ -47,6 +48,13 @@ const PlanCard = ({Usuario, id, imagen, titulo, descripcion, Descripciones }) =>
                             className="mb-12 opacity-80"
                         >
                             {descripcion}
+                        </Typography>
+                        <Typography
+                            variant="lead"
+                            color="white"
+                            className="mb-12 opacity-80"
+                        >
+                            {Precio}
                         </Typography>
                         <div className="flex justify-center gap-2">
                             <Button size="lg" color="white" onClick={()=> SuscribirseHandler(id)}>

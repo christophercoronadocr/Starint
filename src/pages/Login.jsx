@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import NavHeader from '../components/navs/NavHeader'
 import Footers from '../components/Footer/Footers'
 import { getUserLogin } from '../assets/js/Callbacks/APIGetUsers'
-import ErroresFormulario from '../components/ErroresFormulario/ErroresFormulario'
+import ErroresAlert from '../components/ErroresFormulario/ErroresFormulario'
 
 
 const Login = () => {
@@ -37,7 +37,7 @@ const Login = () => {
                 <div className='bg-stone-800 h-1/2 w-2/6 rounded-md md:p-5'>
                     {
                         (error != '')
-                            ? <ErroresFormulario error={error} />
+                            ? <ErroresAlert error={error} />
                             : ""
                     }
                     <div className='flex 300 h-1/5 justify-center items-center text-white'>

@@ -5,12 +5,14 @@ import ServiceMenu from '../components/ServiceMenu/ServiceMenu'
 import Planes from '../components/Planes/Planes'
 import { getUserById } from '../assets/js/Callbacks/APIGetUsers'
 import { getPlansByServiceId, getServices } from '../assets/js/Callbacks/APIGetServices'
+import ErroresAlert from '../components/ErroresFormulario/ErroresFormulario'
 
 const Services = () => {
 
   const [Usuario, setUsuario] = useState({})
   const [Services, setServices] = useState({})
   const [Plan, setPlan] = useState({})
+  const [Error, setError] = useState("")
 
   useEffect(() => {
     fetchData();
@@ -30,12 +32,14 @@ const Services = () => {
     const result = await getPlansByServiceId(id);
     if (result.status != 200) {
       console.log(result);
+      setError(result.data)
       return
     }
 
     const planesDescripcion = JSON.parse(result.data);
 
     if (planesDescripcion.CodigoRespuesta != 200) {
+      setError(result.data)
       console.log(planesDescripcion.MensajeError);
       return
     }
@@ -50,6 +54,11 @@ const Services = () => {
       <div className='flex items-center h-screen'>
         <div className='flex w-1/4 text-center h-full items-center'>
           <div className=' bg-white mx-10 h-3/4 w-full rounded-md shadow-lg text-center'>
+            {
+              (Error != "")
+              ? <ErroresAlert error={Error} />
+              : ""
+            }
             <div className='py-10'>
               <h1 className='font-bold text-4xl'>
                 Servicios disponibles
@@ -59,7 +68,7 @@ const Services = () => {
           </div>
         </div>
         <div className='w-3/4 bg-red-200 mx-2 h-3/4 rounded-lg'>
-          <Planes Plan={Plan} Usuario={Usuario} />
+          <Planes Plan={Plan} Usuario={Usuario} setError={setError} />
         </div>
       </div>
       <Footers verForm={false} />

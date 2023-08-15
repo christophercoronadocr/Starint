@@ -1,13 +1,11 @@
+import { Alert } from '@material-tailwind/react'
 import React from 'react'
 
-const ErroresFormulario = ({error}) => {
+export const ErroresAlert = ({ error }) => {
   return (
-    <div className='bg-orange-600' >
-      <p className='font-bold text-white py-1 mb-1 text-center'>
-        {error}
-      </p>
-    </div>
+    <Alert color='red'>{error}</Alert>
   )
 }
 
-export default ErroresFormulario
+
+export default ErroresAlert;

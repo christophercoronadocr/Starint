@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { registerUser } from '../../assets/js/Callbacks/APIRegisterUser'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import ErroresFormulario from '../ErroresFormulario/ErroresFormulario'
+import ErroresAlert from '../ErroresFormulario/ErroresFormulario'
 
 
 const FormularioRegister = ({ validaAccesoUsuario }) => {
@@ -53,8 +53,8 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
             <div className='bg-cover bg-center w-full h-screen blur-lg absolute'
                 style={{ backgroundImage: `url("https://fondosmil.com/fondo/17010.jpg")` }}>
             </div>
-            <div className='left-1/3 w-1/3 z-10 absolute bg-cover bg-center text-center shadow-2xl rounded-md'
-                style={{ backgroundImage: `url("https://fondosmil.com/fondo/17010.jpg")`, top: '5%', height: '85%' }}>
+            <div className='sm:left-0 sm:w-full sm:top-10 lg:left-1/3 lg:w-1/3 z-10 absolute bg-cover bg-center text-center shadow-2xl rounded-md'
+                style={{ backgroundImage: `url("https://fondosmil.com/fondo/17010.jpg")`}}>
                 <div className=' py-6'>
                     <p className='text-bold text-white text-4xl'>
                         SIGN UP
@@ -62,7 +62,7 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
                 </div>
                 {
                     (Error != '')
-                        ? <ErroresFormulario error={Error} />
+                        ? <ErroresAlert error={Error} />
                         : ""
                 }
                 <div className='mb-5'>
@@ -98,10 +98,12 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
                         placeholder='Ingrese su contraseña' onChange={(e) => setContrasena(e.target.value)} value={contrasena} />
                 </div>
                 <div className='mb-5'>
-                    <button type='submit' className='bg-green-700 hover:bg-green-500 text-white font-bold uppercase sm:w-4/5 md:mr-5 md:w-1/5 p-4 rounded-md inline'>Register</button>
+                    <button type='submit' className='bg-green-700 hover:bg-green-500 text-white font-bold uppercase sm:w-4/5 md:mr-5 lg:w-1/3 p-4 rounded-md inline'>
+                        <span className='text-xs'>Register</span>
+                        </button>
                     <Link to={'/'}>
-                        <button type='button' className='bg-red-700 hover:bg-red-500 text-white font-bold uppercase sm:w-4/5 md:w-1/5 p-4 rounded-md inline'>
-                            Regresar
+                        <button type='button' className='bg-red-700 hover:bg-red-500 text-white font-bold uppercase sm:w-4/5 md:mr-5 lg:w-1/3 p-4 rounded-md inline'>
+                            <span className='text-xs'>Regresar</span>
                         </button>
                     </Link>
                 </div>
