@@ -28,7 +28,7 @@ const NavHeader = ({ Usuario = {}, setUsuario }) => {
                                     <div className="space-x-4">
                                         <Link to={'/'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Residential</Link>
                                         <Link to={'enterprise'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Enterprise</Link>
-                                        <Link to={'cars'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Cars</Link>
+                                        <Link to={'cars'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">Starint Game Pass</Link>
                                         <Link to={'tv'} className="text-white hover:text-gray-200 hover:underline uppercase font-bold">TV</Link>
                                     </div>
                                     <div className="space-x-2">

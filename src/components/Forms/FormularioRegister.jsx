@@ -67,35 +67,35 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
                 }
                 <div className='mb-5'>
                     <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
+                        placeholder='Name' onChange={(e) => setNombre(e.target.value)} value={nombre} />
                 </div>
                 <div className='mb-5'>
                     <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su apellido' onChange={(e) => setApellido(e.target.value)} value={apellido} />
+                        placeholder='Lastname' onChange={(e) => setApellido(e.target.value)} value={apellido} />
                 </div>
                 <div className='mb-5'>
                     <input type="number" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su DNI' onChange={(e) => setDNI(e.target.value)} value={DNI} />
+                        placeholder='DNI' onChange={(e) => setDNI(e.target.value)} value={DNI} />
                 </div>
                 <div className='mb-5'>
                     <input type="number" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su telefono' onChange={(e) => setTelefono(e.target.value)} value={telefono} />
+                        placeholder='Phone numbre' onChange={(e) => setTelefono(e.target.value)} value={telefono} />
                 </div>
                 <div className='mb-5'>
                     <input type="text" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su país' onChange={(e) => setPais(e.target.value)} value={pais} />
+                        placeholder='Country' onChange={(e) => setPais(e.target.value)} value={pais} />
                 </div>
                 <div className='mb-5'>
                     <input type="date" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su fecha de nacimiento' onChange={(e) => setFechaNacimiento(e.target.value)} value={fechaNacimiento} />
+                        placeholder='Birthdate' onChange={(e) => setFechaNacimiento(e.target.value)} value={fechaNacimiento} />
                 </div>
                 <div className='mb-5'>
                     <input type="email" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su email' onChange={(e) => setEmail(e.target.value)} value={email} />
+                        placeholder='Email' onChange={(e) => setEmail(e.target.value)} value={email} />
                 </div>
                 <div className='mb-5'>
                     <input type="password" className='w-4/5 p-4 rounded-md hover:border-gray-300 bg-slate-600 font-bold opacity-90 '
-                        placeholder='Ingrese su contraseña' onChange={(e) => setContrasena(e.target.value)} value={contrasena} />
+                        placeholder='Password' onChange={(e) => setContrasena(e.target.value)} value={contrasena} />
                 </div>
                 <div className='mb-5'>
                     <button type='submit' className='bg-green-700 hover:bg-green-500 text-white font-bold uppercase sm:w-4/5 md:mr-5 lg:w-1/3 p-4 rounded-md inline'>
@@ -103,7 +103,7 @@ const FormularioRegister = ({ validaAccesoUsuario }) => {
                         </button>
                     <Link to={'/'}>
                         <button type='button' className='bg-red-700 hover:bg-red-500 text-white font-bold uppercase sm:w-4/5 md:mr-5 lg:w-1/3 p-4 rounded-md inline'>
-                            <span className='text-xs'>Regresar</span>
+                            <span className='text-xs'>Back</span>
                         </button>
                     </Link>
                 </div>

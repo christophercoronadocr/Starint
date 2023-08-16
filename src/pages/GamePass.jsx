@@ -1,11 +1,11 @@
 import React from 'react'
 import Headers from '../components/header/Header'
 import Footers from '../components/Footer/Footers'
-import {datosEncabezado, datosCuerpo} from '../assets/js/dataCars'
+import {datosEncabezado, datosCuerpo} from '../assets/js/dataGamePass'
 import Tarjeta from '../components/Utils/Tarjeta'
 
 
-const Cars = () => {
+const GamePass = () => {
   return (
     <>
       <Headers contenido={datosEncabezado} />
@@ -17,4 +17,4 @@ const Cars = () => {
   )
 }
 
-export default Cars
+export default GamePass

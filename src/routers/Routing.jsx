@@ -8,7 +8,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login'
 import NotFoundPage from '../pages/NotFoundPage';
 import Enterprise from '../pages/Enterprise';
-import Cars from '../pages/Cars';
+import GamePass from '../pages/GamePass';
 import TV from '../pages/TV';
 import Register from '../pages/Register';
 import Services from '../pages/Services';
@@ -26,7 +26,7 @@ const Routing = () => {
                     <Enterprise />
                 </Route>
                 <Route path={"/cars"}>
-                    <Cars />
+                    <GamePass />
                 </Route>
                 <Route path={"/tv"}>
                     <TV />

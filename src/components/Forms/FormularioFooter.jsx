@@ -12,12 +12,12 @@ const FormularioFooter = () => {
                 <div className='text-right'>
                     <input type="text" className='w-1/2 h-12 rounded-md p-2 border 
                         border-gray-600 bg-transparent px-4 py-2 
-                        focus:outline-none focus:border-white text-white' placeholder='Ingresa tu correo electrónico' />
+                        focus:outline-none focus:border-white text-white' placeholder='Enter Email' />
                 </div>
                 <div className='text-left lg:pl-6'>
                     <button type="button"
                         className='lg:w-1/6 sm:w-1/2 h-12 border-black font-bold rounded-md
-            bg-neutral-700 uppercase hover:bg-neutral-500 transition text-gray-400'>
+                                    bg-gray-700 uppercase hover:bg-blue-gray-500 transition text-gray-400'>
                         REGISTER
                     </button>
                 </div>
