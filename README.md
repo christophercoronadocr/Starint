@@ -1,8 +1,7 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este es un manual para instalar y ejecutar el sitio Starint
+ 
+1. Como primer paso el usuario deberá descargar el proyecto.
+2. Ejecutar el comando npm i para instalar las dependencias de proyecto.
+3. Seguidamente deberá ejecutar el Backup de la base de datos llamado Backup.sql
+4. Como cuarto paso deberá descargar el proyecto llamado StarintAPIS que permite la conexión entre la base de datos y el sitio Starint
+5. Por último paso deberá ejecutar el comando npm run dev para visualizar el sitio Starint de forma local.
